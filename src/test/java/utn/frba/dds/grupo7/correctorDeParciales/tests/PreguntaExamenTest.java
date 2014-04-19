@@ -18,7 +18,7 @@ public class PreguntaExamenTest {
 	}
 
 	// Son al re dope solo testeo si INT == INT o STRING == STRING o Boolean == Boolean
-	// y un getter damePuntaje() solo los hago para practicar
+	// y un getter damePuntaje() ... solo los hago para practicar
 	
 	@Test
 	public void verdaderoOFalsoEsCorrectaDevuelveVerdaderoCuandoCoincidenRespuestaAlumnoYRespuestaCorrecta() {

@@ -8,7 +8,13 @@ public class RestarNPuntos implements CriterioParaCalculoDeNota {
 		
 		double valorNARestar = puntajeTotalExamen - 10.0;  
 		
-		return puntajeTotalAlumno - valorNARestar;
+		double notaAlumno = puntajeTotalAlumno - valorNARestar;
+		
+		if(notaAlumno > 0.0)
+			return notaAlumno;
+		else
+			return 0.0;	
+		
 	}
 	
 }
