@@ -17,5 +17,9 @@ public class NotaPromedioDeLosCriterios implements CriterioParaCalculoDeNota {
 						.orElse(0.0);
 				
 	}
+	
+	public void agregarCriterio(CriterioParaCalculoDeNota criterio){
+		this.criterios.add(criterio);
+	}
 
 }

@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class TablaDeConversion implements CriterioParaCalculoDeNota {
 
-	HashMap<Integer,Integer> tablaConversionPuntaje; 
+	HashMap<Double,Double> tablaConversionPuntaje; 
 	
 	@Override
 	public double calcularNota(Double puntajeTotalAlumno, Double puntajeTotalExamen) {
@@ -19,7 +19,7 @@ public class TablaDeConversion implements CriterioParaCalculoDeNota {
 		
 	}
 	
-	public TablaDeConversion(HashMap<Integer,Integer> tablaConversionPuntaje){
+	public TablaDeConversion(HashMap<Double,Double> tablaConversionPuntaje){
 		this.tablaConversionPuntaje = tablaConversionPuntaje;
 	}
 

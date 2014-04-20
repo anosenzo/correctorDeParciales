@@ -16,5 +16,10 @@ public class NotaMasAltaDeLosCriterios implements CriterioParaCalculoDeNota {
 					    // .getAsDouble() Probar tambien esta opcion!! 
 						.orElse(0.0);
 	}
+	
+	public void agregarCriterio(CriterioParaCalculoDeNota criterio){
+		this.criterios.add(criterio);
+	}
+	
 
 }
