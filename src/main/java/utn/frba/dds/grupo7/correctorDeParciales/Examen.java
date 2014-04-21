@@ -11,6 +11,9 @@ public class Examen {
 	CriterioParaCalculoDeNota criterio;
 	
 	public double obtenerNota(){
+		if(preguntas.size() == 0)
+			throw new ExamenSinNingunaPreguntaCargada("No se cargo ninguna pregunta en el examen");
+		
 		return this.criterio.calcularNota( this.calcularPuntajeTotalAlumno(), 
 										   this.calcularPuntajeTotalExamen() );
 	}

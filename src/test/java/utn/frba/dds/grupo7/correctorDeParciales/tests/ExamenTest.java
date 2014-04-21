@@ -10,7 +10,9 @@ import org.junit.Test;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import utn.frba.dds.grupo7.correctorDeParciales.Examen;
+import utn.frba.dds.grupo7.correctorDeParciales.ExamenSinNingunaPreguntaCargada;
 import utn.frba.dds.grupo7.correctorDeParciales.criterios.CriterioParaCalculoDeNota;
+import utn.frba.dds.grupo7.correctorDeParciales.criterios.PuntajeTotalAlumnoNoEncontradoEnTablaDeConversion;
 import utn.frba.dds.grupo7.correctorDeParciales.preguntas.PreguntaExamen;
 
 public class ExamenTest {
@@ -73,8 +75,7 @@ public class ExamenTest {
 		
 	}
 	
-	// Seria mejor que muestre una excepcion
-	@Test 
+	@Test(expected = ExamenSinNingunaPreguntaCargada.class)
 	public void obtenerNotaDelExamenCuandoNoHayNingunaPreguntaCargadaDevuelveUnaExcepcionExamenSinNingunaPreguntaCargada(){
 
 		HashSet<PreguntaExamen> ColeccionSinPreguntas = new HashSet<PreguntaExamen>();
@@ -83,7 +84,7 @@ public class ExamenTest {
 		
 		doReturn(1.0).when(this.criterio).calcularNota(0.0, 0.0);
 		
-		assertEquals(1.0, examen.obtenerNota(), 0.01);
+		examen.obtenerNota();
 		
 	}
 	
