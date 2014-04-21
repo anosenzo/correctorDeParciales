@@ -2,13 +2,11 @@ package utn.frba.dds.grupo7.correctorDeParciales.preguntas;
 
 import java.util.ArrayList;
 
-public class PreguntaConcreta implements PreguntaExamen {
+public class PreguntaConcreta extends PreguntaExamen {
 
-	String enunciado;
 	String respuestaCorrecta;
 
 	String respuestaAlumno;
-	double puntaje;
 
 	@Override
 	public boolean esCorrecta() {
@@ -22,9 +20,10 @@ public class PreguntaConcreta implements PreguntaExamen {
 
 	public PreguntaConcreta(String enunciado, String respuestaCorrecta,
 			String respuestaAlumno, double puntaje) {
-		this.enunciado = enunciado;
+		
+		super(enunciado, puntaje);
+		
 		this.respuestaCorrecta = respuestaCorrecta;
 		this.respuestaAlumno = respuestaAlumno;
-		this.puntaje = puntaje;
 	}
 }

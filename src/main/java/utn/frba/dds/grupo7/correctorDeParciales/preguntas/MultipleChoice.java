@@ -2,14 +2,12 @@ package utn.frba.dds.grupo7.correctorDeParciales.preguntas;
 
 import java.util.ArrayList;
 
-public class MultipleChoice implements PreguntaExamen {
+public class MultipleChoice extends PreguntaExamen {
 
-	String enunciado;
 	ArrayList<String> opciones;
 	int respuestaCorrecta;
 	
 	int respuestaAlumno;
-	double puntaje;
 	
 	@Override
 	public boolean esCorrecta() {
@@ -23,11 +21,10 @@ public class MultipleChoice implements PreguntaExamen {
 	
 	public MultipleChoice(String enunciado, ArrayList<String> opciones, int respuestaCorrecta, 
 							int respuestaAlumno, double puntaje){
-		this.enunciado = enunciado;
+		super(enunciado, puntaje);
 		this.opciones = opciones;
 		this.respuestaCorrecta = respuestaCorrecta;
 		this.respuestaAlumno = respuestaAlumno;
-		this.puntaje = puntaje;
 	}
 
 }

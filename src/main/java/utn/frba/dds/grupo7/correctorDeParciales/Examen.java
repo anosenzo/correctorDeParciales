@@ -7,7 +7,7 @@ import utn.frba.dds.grupo7.correctorDeParciales.preguntas.PreguntaExamen;
 
 public class Examen {
 	
-	HashSet<PreguntaExamen> preguntas = new HashSet<PreguntaExamen>();
+	HashSet<PreguntaExamen> preguntas;
 	CriterioParaCalculoDeNota criterio;
 	
 	public double obtenerNota(){
@@ -32,5 +32,9 @@ public class Examen {
 		
 	}
 	
+	public Examen(HashSet<PreguntaExamen> preguntas, CriterioParaCalculoDeNota criterio ){
+		this.preguntas = preguntas;
+		this.criterio = criterio;
+	}
 	
 }

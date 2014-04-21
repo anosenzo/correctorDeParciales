@@ -1,5 +1,7 @@
 package utn.frba.dds.grupo7.correctorDeParciales.tests;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -34,10 +36,17 @@ public class PreguntaExamenTest {
 	}
 	
 	@Test
-	public void preguntaCorrectaEsCorrectaDevuelveVerdaderoCuandoCoincidenRespuestaAlumnoYRespuestaCorrecta() {
+	public void preguntaConcretaEsCorrectaDevuelveVerdaderoCuandoCoincidenRespuestaAlumnoYRespuestaCorrecta() {
 		PreguntaConcreta preguntaConcreta = new PreguntaConcreta("De que color es el caballo blanco de San Martin",
 																	"blanco", "blanco", 2);
 		Assert.assertTrue(preguntaConcreta.esCorrecta());
+	}
+	
+	@Test
+	public void preguntaExamenSiSuPuntajeEs4Devuelve4(){
+		VerdaderoFalso verdaderoFalso =  new VerdaderoFalso("2 + 2 = 4", true, true, 4);
+		
+		assertEquals(4.0 , verdaderoFalso.damePuntaje() , 0.01);
 	}
 	
 

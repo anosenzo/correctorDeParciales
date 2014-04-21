@@ -1,13 +1,11 @@
 package utn.frba.dds.grupo7.correctorDeParciales.preguntas;
 
 
-public class VerdaderoFalso implements PreguntaExamen {
+public class VerdaderoFalso extends PreguntaExamen {
 	
-	String enunciado;
 	boolean respuestaCorrecta;
 	
 	boolean respuestaAlumno;
-	double puntaje;
 	
 	@Override
 	public boolean esCorrecta() {
@@ -21,10 +19,12 @@ public class VerdaderoFalso implements PreguntaExamen {
 	
 	public VerdaderoFalso(String enunciado, boolean respuestaCorrecta, boolean respuestaAlumno, 
 								double puntaje){
-		this.enunciado = enunciado;
+	
+		super(enunciado, puntaje);
+		
 		this.respuestaCorrecta = respuestaCorrecta;
 		this.respuestaAlumno = respuestaAlumno;
-		this.puntaje = puntaje;
+		
 	} 
 
 }
